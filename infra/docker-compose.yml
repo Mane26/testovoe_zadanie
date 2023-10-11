@@ -1,0 +1,11 @@
+version: '3.10'
+services:
+
+  db:
+    image: postgres:14.2
+    container_name: testovoe
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env
+    restart: always
